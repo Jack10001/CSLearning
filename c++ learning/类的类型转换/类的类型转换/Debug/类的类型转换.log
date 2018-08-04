@@ -1,0 +1,5 @@
+﻿  main.cpp
+  stone.cpp
+d:\python\repos\类的类型转换\类的类型转换\stone.cpp(18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+  类的类型转换.vcxproj -> D:\python\Repos\类的类型转换\Debug\类的类型转换.exe
