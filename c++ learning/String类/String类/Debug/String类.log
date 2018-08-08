@@ -1,0 +1,3 @@
+﻿  main.cpp
+d:\python\repos\string类\string类\main.cpp(53): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  String类.vcxproj -> D:\python\Repos\String类\Debug\String类.exe
