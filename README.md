@@ -1,2 +1,3 @@
 # c-learning
-Hello World£¡
+Hello World!
+I love programming
