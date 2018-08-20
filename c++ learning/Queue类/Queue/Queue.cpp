@@ -48,10 +48,9 @@
 	 items++;
 	 if (front == NULL)
 		 front = temp;
-	 else {
+	 else 
 		 rear->next = temp;
-		 rear = temp;
-	 }
+     rear = temp;
 	 return true;
  }
  bool Queue::dequeue(Item & item_)
