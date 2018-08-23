@@ -3,21 +3,23 @@
 #define EXC_MEAN_H_
 
 #include<iostream>
-
-class Bad_hmean
+#include<exception>
+class Bad_hmean:public std::exception
 {
 private:
 	double v1, v2;
 public:
 	Bad_hmean(double a=0.0,double b=0.0):v1(a),v2(b){}
-	void mesg();
+	//void mesg();
+	const char * what() { return "bad hmean arguement!\n"; }
 };
-class Bad_gmean
+class Bad_gmean:public std::exception
 {
 public:
 	double v1, v2;
 	Bad_gmean(double a=0.0,double b=0.0):v1(a),v2(b){}
-	const char* mesg();
+	//const char* mesg();
+	const char * what() { return "bad gmean arguement!\n"; }
 };
 
 class Demo
@@ -39,6 +41,7 @@ public:
 		std::cout << "demo " << word << " lives!\n";
 	}
 };
+/*
 inline void Bad_hmean::mesg()
 {
 	std::cout << "hmean(" << v1 << "," << v2 << ") invalid arguement a=-b\n";
@@ -46,5 +49,5 @@ inline void Bad_hmean::mesg()
 inline const char * Bad_gmean::mesg()
 {
 	return "gmean() arguement should be >=0\n";
-}
+}*/
 #endif // !EXC_MEAN_H_

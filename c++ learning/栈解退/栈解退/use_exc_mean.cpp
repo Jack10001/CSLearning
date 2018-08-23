@@ -18,14 +18,18 @@ int main()
 			try {
 				z = means(x, y);
 			}
-			catch(Bad_hmean & bh){
-				bh.mesg();
+			//catch(Bad_hmean & bh){
+				//bh.mesg();
+			catch(Bad_hmean  & e){
+				cout<<e.what();
 				cout << "try again:\n";
 				continue;
 			}
-			catch (Bad_gmean & bg) {
-				cout << bg.mesg();
-				cout << bg.v1 << " , " << bg.v2 << endl;
+			catch (Bad_gmean & e) {
+			//	cout << bg.mesg();
+		//	catch(std::exception & e){
+				cout<<e.what();
+				cout << e.v1 << " , " << e.v2 << endl;
 				break;
 			}
 			cout << "a and b after means():\n" << z << endl;
@@ -60,8 +64,10 @@ double means(double a, double b)
 		hm = hmean(a, b);
 		gm = gmean(a, b);
 	}
-	catch(Bad_hmean & bh){
-		bh.mesg();
+	//catch(Bad_hmean & bh){
+	catch(Bad_hmean & e){
+		//bh.mesg();
+		std::cout<<e.what();
 		std::cout << "caught in means()\n";
 		throw;
 	}
