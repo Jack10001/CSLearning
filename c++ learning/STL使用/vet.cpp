@@ -1,3 +1,9 @@
+/*
+*vet.cpp
+*created on :2018-08-28
+*author:Jack
+*/
+
 #include<iostream>
 #include<vector>
 #include<string>
