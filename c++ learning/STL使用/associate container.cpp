@@ -109,13 +109,53 @@ void use_multimap()
 		cout << (*pr).second<<endl;
 	cout << endl;
 }
+/*---------------use functor------------------*/
+void outint(const int n) { std::cout << n << " "; }
+
+template<class T>
+class Toobig {
+private:
+	T cutoff;
+public:
+	Toobig(const T & v) :cutoff(v) {}
+	bool operator()(const T &v) { return v > cutoff; }
+
+};
+
+void use_functor()
+{
+
+	using namespace std;
+	//use list : remove_if()
+	list<int> one = { 120,456,784,12,74,56,23,15,18,56,102};
+	list<int>::iterator pr;
+	/*--first way to output--*/
+	ostream_iterator<int, char> out (std::cout, " ");
+	copy(one.begin(), one.end(), out);
+	cout << endl;
+	/*--second way to output--*/
+	for (pr = one.begin(); pr != one.end(); pr++)
+		cout << *pr<<" ";
+	cout << endl;
+	/*--third way to output*/
+	for_each(one.begin(), one.end(), outint);
+	cout << endl << endl;
+	Toobig<int> big(100);
+	one.remove_if(big);
+	for_each(one.begin(), one.end(), outint);
+
+
+}
 int main()
 {
-	std::cout << "----------------use list-------------------\n";
+	std::cout << "----------------use list-------------------\n\n";
 	use_list();
-	std::cout << "------------------use set---------------------\n";
+	std::cout << "------------------use set---------------------\n\n";
 	use_set();
-	std::cout << "--------------------use multimap------------------\n";
+	std::cout << "--------------------use multimap------------------\n\n";
 	use_multimap();
+	std::cout << "----------------------use functor--------------------\n\n";
+	use_functor();
+	std::cout << std::endl;
 	system("pause");
 }
