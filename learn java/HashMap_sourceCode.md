@@ -87,12 +87,17 @@ public class HashMap<K,V>
         putAllForCreate(m);  
     }  
  
+
+
     //求hash值的方法，重新计算hash值
     static int hash(int h) {  
         h ^= (h >>> 20) ^ (h >>> 12);  
         return h ^ (h >>> 7) ^ (h >>> 4);  
     }  
- 
+
+
+
+
     // 返回h在数组中的索引值，这里用&代替取模，旨在提升效率 
     // h & (length-1)保证返回值的小于length  
     static int indexFor(int h, int length) {  
