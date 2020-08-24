@@ -1,6 +1,7 @@
 package hashtable;
 
 class TwoSum_1{
+    
     //使用HashMap保存之前已经遍历过的值
     public int[] twoSum(int[] nums, int target) {
         if(nums == null || nums.length == 0) return null;
