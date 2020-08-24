@@ -1,4 +1,4 @@
-package learn_Arrya;
+package learn_Array;
 
 public class Rotate {
 	 public void rotate(int[][] matrix) {

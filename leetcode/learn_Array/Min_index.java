@@ -1,4 +1,4 @@
-package learn_Arrya;
+package learn_Array;
 
 public class Min_index {
 	public static int pivotIndex(int[] nums) {

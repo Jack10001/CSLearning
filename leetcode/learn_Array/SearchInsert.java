@@ -1,4 +1,4 @@
-package learn_Arrya;
+package learn_Array;
 
 public class SearchInsert {
 	 public static int searchInsert(int[] nums, int target) {
