@@ -27,6 +27,7 @@ Since the return type is an integer, the decimal digits are truncated and only t
 2.**牛顿法**
 
 如图：
+
 ![image may be lost](https://github.com/Jack10001/CSLearning/blob/master/leetcode/images/newton.png)
 ```Java
 public class Solution {
