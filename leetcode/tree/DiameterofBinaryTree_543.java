@@ -8,11 +8,6 @@ public class DiameterofBinaryTree_543 {
 		return max;
 		}
 	private int helper(TreeNode root){
-		//1.姹傚嚭涓や釜鍙跺瓙鑺傜偣涔嬮棿鐨勮矾寰�
-		//2.鎵惧埌鏈�澶ч暱搴�
-
-		//---姹傛爲娣卞害鐨勫彉浣�---
-		//姹傛爲娣卞害锛屼粠鍙跺瓙鑺傜偣寮�濮嬩竴灞備竴灞傚線涓婄疮鍔�
 		if(root==null) return 0;
 		int l,r;
 		l=helper(root.left);//求出左子树的深度
